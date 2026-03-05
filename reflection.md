@@ -29,7 +29,7 @@ I used Claude Code
 The number of attempts bug was explained in a correct way 
 
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-nothing so far
+when i had manually solved a bug and told it to move that function to logic_utils file it moved the previous unfixed version. but I just realised while typing this, my manual updates didnt get saved on the AI's branch.
 
 
 ---
