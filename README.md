@@ -54,5 +54,7 @@ It wrote the code, ran away, and now the game is unplayable.
    ![Won Screenshot](./Won_ss.png)
 
 ## 🚀 Stretch Features
-
+- [X] Challenge 1: Advanced Edge-Case Testing
+   ![Testing Screenshot](./test_ss.png)
+   
 - [ ] [If you choose to complete Challenge 4, insert a screenshot of your Enhanced Game UI here]
