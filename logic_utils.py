@@ -21,11 +21,14 @@ def parse_guess(raw: str):
     if raw == "":
         return False, None, "Enter a guess."
 
+    # FIXED - the problem was float inputs like 100.1 were silently truncated to 100,
+    # int(float("100.1")) = 100 which could incorrectly match the secret number,
+    # solved by rejecting any input containing a decimal point using Claude Code
+    if "." in raw:
+        return False, None, "Please enter a whole number."
+
     try:
-        if "." in raw:
-            value = int(float(raw))
-        else:
-            value = int(raw)
+        value = int(raw)
     except Exception:
         return False, None, "That is not a number."
 
