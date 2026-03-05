@@ -93,6 +93,10 @@ if new_game:
     st.session_state.status = "playing"
     st.session_state.history = []
     st.session_state.score = 0
+    # FIXED - the problem was last_message was not cleared on new game,
+    # the last hint from the previous game kept showing at the top of the new game,
+    # solved by resetting last_message to None on new game using Claude Code
+    st.session_state.last_message = None
     st.success("New game started.")
     st.rerun()
 
@@ -129,12 +133,10 @@ if submit:
         st.session_state.attempts += 1
         st.session_state.history.append(guess_int)
 
-        if st.session_state.attempts % 2 == 0:
-            secret = str(st.session_state.secret)
-        else:
-            secret = st.session_state.secret
-
-        outcome, message = check_guess(guess_int, secret)
+        # FIXED - the problem was on even attempts the secret was converted to a string,
+        # this caused lexicographic comparison so "50" < "9" making hints wrong for those attempts,
+        # solved by always passing the integer secret to check_guess using Claude Code
+        outcome, message = check_guess(guess_int, st.session_state.secret)
 
         st.session_state.score = update_score(
             current_score=st.session_state.score,
