@@ -25,9 +25,25 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [] Describe the game's purpose.
+- [ 
+
+   1. SOLVED The Hints are reversed 
+   2. SOLVED If i am chnaging the difficulty midgame then the attempts are not resetting 
+   3. SOLVED Number of attempts are one less than what it should be 
+   4. SOLVED The new game button isnt working as its supposed to, i had to refresh it, status not reset 
+   5. SOLVED Submit guess button is glitchy, had to click twice to submit a guess but it still counted two attempts for one input as you can see from the history, hint not displayed correctly 
+   6. SOLVED Incorrect guess was also being shown as correct, example if i used float 100.1 and the target was 100, it gave me a correct on this which is wrong
+   7. SOLVED It is storing history or displaying history incorrectly not immediately history not reset on new game
+   8. SOLVED The range isnt changing according to the difficulty
+
+] Detail which bugs you found.
+
+- [ 
+
+   
+
+] Explain what fixes you applied.
 
 ## 📸 Demo
 
