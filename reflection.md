@@ -16,6 +16,8 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   6. Incorrect guess was also being shown as correct, example if i used float 100.1 and the target was 100, it gave me a correct on this which is wrong
   7. It is storing history or displaying history incorrectly not immediately
   8. The range isnt changing according to the difficulty
+  9. The last hint from the previous game was still showing when starting a new game SOLVED
+  10. On every second guess the hints were wrong because the secret was being compared as a string not a number SOLVED
 ---
 
 ## 2. How did you use AI as a teammate?
