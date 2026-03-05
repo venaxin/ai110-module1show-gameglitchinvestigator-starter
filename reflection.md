@@ -40,7 +40,7 @@ I tested it based on how it failed previously
   and what it showed you about your code.
 Manual testing was just me trying out different edge cases and then I made Claude code design some test on 
 - Did AI help you design or understand any tests? How?
-
+yeah it helped me find bugs within the test itself and helped me design a wide variety of test i could only come up with 10 but it have 37 tests form the obvious to more niche ones which was nice covering a wide area
 
 ---
 
