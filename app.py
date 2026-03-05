@@ -121,6 +121,7 @@ if st.session_state.status != "playing":
 # invalid inputs wasted an attempt and the input field never cleared causing double submissions,
 # solved by moving attempt increment inside the valid guess block and adding st.rerun() using Claude Code
 if submit:
+
     ok, guess_int, err = parse_guess(raw_guess)
 
     # FIXED - the problem was invalid inputs like letters or floats were being added to guess history,

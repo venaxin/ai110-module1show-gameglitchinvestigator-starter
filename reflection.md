@@ -24,9 +24,12 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? 
 I used Claude Code
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+The number of attempts bug was explained in a correct way 
 
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+nothing so far
 
 
 ---
@@ -34,23 +37,31 @@ I used Claude Code
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+I tested it based on how it failed previously
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+Manual testing was just me trying out different edge cases and then I made Claude code design some test on 
 - Did AI help you design or understand any tests? How?
+yeah it helped me find bugs within the test itself and helped me design a wide variety of test i could only come up with 10 but it have 37 tests form the obvious to more niche ones which was nice covering a wide area
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+so basically every interaction caused a rerun so the secret number was changing everytime
+- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit? 
+so whenever a user clicks a button, types in a text box, any interaction will trigger a full rerun where streamlit reruns the entire python script from top to bottom
 - What change did you make that finally gave the game a stable secret number?
-
+I added certain conditions which had to be true in order for the secret to change, like pressing new game, changing difficulty, and another one where by default it only runs on first load
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+Having a running doc ready to look back at and keep things in track, and i liked that the code claude used a separate branch and performed the chnages there and i had to make a pr and verify everything and then merge it which is very safe
 - What is one thing you would do differently next time you work with AI on a coding task?
+I realised i can do it in a faster way if i prompt AI better
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+It is drastically better, like having a juiced up coworker guru whos teaming up with me to solve problems
