@@ -24,6 +24,7 @@ attempt_limit = attempt_limit_map[difficulty]
 
 low, high = get_range_for_difficulty(difficulty)
 
+# FIXME: Logic breaks here
 if st.session_state.get("difficulty") != difficulty:
     st.session_state.difficulty = difficulty
     st.session_state.attempts = 0
@@ -92,7 +93,7 @@ if st.session_state.status != "playing":
     st.stop()
 
 if submit:
-    st.session_state.attempts += 1
+    st.session_state.attempts += 1 
 
     ok, guess_int, err = parse_guess(raw_guess)
 

@@ -8,23 +8,26 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
 
-  1. The Hints are reversed SOLVED
-  2. If i am chnaging the difficulty midgame then the attempts are not resetting SOLVED
-  3. Number of attempts are one less than what it should be SOLVED
-  4. The new game button isnt working as its supposed to, i had to refresh it 
-  5. Submit guess button is glitchy, had to click twice to submit a guess but it still counted two attempts for one input as you can see from the history
+  1. SOLVED The Hints are reversed 
+  2. SOLVED If i am chnaging the difficulty midgame then the attempts are not resetting 
+  3. SOLVED Number of attempts are one less than what it should be 
+  4. SOLVED The new game button isnt working as its supposed to, i had to refresh it, status not reset 
+  5. SOLVED Submit guess button is glitchy, had to click twice to submit a guess but it still counted two attempts for one input as you can see from the history, hint not displayed correctly 
   6. Incorrect guess was also being shown as correct, example if i used float 100.1 and the target was 100, it gave me a correct on this which is wrong
-  7. It is storing history or displaying history incorrectly not immediately
-  8. The range isnt changing according to the difficulty
+  7. It is storing history or displaying history incorrectly not immediately history not reset on new game
+  8. SOLVED The range isnt changing according to the difficulty 
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)? 
 I used Claude Code
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+The number of attempts bug was explained in a correct way 
 
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+nothing so far
 
 
 ---
@@ -32,8 +35,10 @@ I used Claude Code
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+I tested it based on how it failed previously
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+Manual testing was just me trying out different edge cases and then I made Claude code design some test on 
 - Did AI help you design or understand any tests? How?
 
 ---
