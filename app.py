@@ -119,8 +119,10 @@ if st.session_state.status != "playing":
 if submit:
     ok, guess_int, err = parse_guess(raw_guess)
 
+    # FIXED - the problem was invalid inputs like letters or floats were being added to guess history,
+    # this polluted the history with garbage values that were never real guesses,
+    # solved by only appending to history on valid guesses using Claude Code
     if not ok:
-        st.session_state.history.append(raw_guess)
         st.error(err)
     else:
         st.session_state.attempts += 1
