@@ -18,13 +18,13 @@ def test_winning_guess_returns_correct_message():
     outcome, message = check_guess(50, 50)
     assert "Correct" in message
 
-def test_too_high_returns_higher_message():
+def test_too_high_returns_lower_message():
     outcome, message = check_guess(80, 50)
-    assert "HIGHER" in message
-
-def test_too_low_returns_lower_message():
-    outcome, message = check_guess(10, 50)
     assert "LOWER" in message
+
+def test_too_low_returns_higher_message():
+    outcome, message = check_guess(10, 50)
+    assert "HIGHER" in message
 
 def test_guess_boundary_low():
     outcome, _ = check_guess(1, 1)
