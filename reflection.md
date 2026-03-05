@@ -9,13 +9,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   (for example: "the secret number kept changing" or "the hints were backwards").
 
   1. The Hints are reversed SOLVED
-  2. The new game button isnt working as its supposed to, i had to refresh it 
-  3. Submit guess button is glitchy, had to click twice to submit a guess but it still counted two attempts for one input as you can see from the history
-  4. Incorrect guess was also being shown as correct, example if i used float 100.1 and the target was 100, it gave me a correct on this which is wrong
-  5. If i am chnaging the difficulty midgame then the attempts are not resetting.
-  6. Number of attempts are one less than what it should be SOLVED
-  7. Easy mode should have 20 attempts but only has 6
-  8. It is storing history or displaying history incorrectly not immediately
+  2. If i am chnaging the difficulty midgame then the attempts are not resetting SOLVED
+  3. Number of attempts are one less than what it should be SOLVED
+  4. The new game button isnt working as its supposed to, i had to refresh it 
+  5. Submit guess button is glitchy, had to click twice to submit a guess but it still counted two attempts for one input as you can see from the history
+  6. Incorrect guess was also being shown as correct, example if i used float 100.1 and the target was 100, it gave me a correct on this which is wrong
+  7. It is storing history or displaying history incorrectly not immediately
+  8. The range isnt changing according to the difficulty
 ---
 
 ## 2. How did you use AI as a teammate?
