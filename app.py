@@ -24,6 +24,9 @@ attempt_limit = attempt_limit_map[difficulty]
 
 low, high = get_range_for_difficulty(difficulty)
 
+# FIXED - the problem was changing difficulty mid-game did not reset the game state,
+# session_state blocks only run once on first load so attempts/score/secret were never reset,
+# solved by tracking active difficulty and triggering a full reset on change using Claude Code
 if st.session_state.get("difficulty") != difficulty:
     st.session_state.difficulty = difficulty
     st.session_state.attempts = 0
@@ -39,6 +42,9 @@ st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
+# FIXED - the problem was attempts were initialized to 1 instead of 0,
+# this was causing the display to show 7 attempts left instead of 8 on game start,
+# solved by initializing attempts to 0 using Claude Code
 if "attempts" not in st.session_state:
     st.session_state.attempts = 0
 
@@ -78,6 +84,9 @@ with col2:
 with col3:
     show_hint = st.checkbox("Show hint", value=True)
 
+# FIXED - the problem was the New Game button only reset attempts and secret,
+# status/history/score were not reset and the range was hardcoded to 1-100 ignoring difficulty,
+# solved by resetting all game state and using the correct difficulty range using Claude Code
 if new_game:
     st.session_state.attempts = 0
     st.session_state.secret = random.randint(low, high)
